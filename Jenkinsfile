@@ -24,12 +24,18 @@ pipeline {
     post {
         always {
           // 
+          steps {
+          }
         }
         success {
           //
+          steps {
+          }
         }
         failure {
           //
+          steps {
+          }
         }
     }
 }
