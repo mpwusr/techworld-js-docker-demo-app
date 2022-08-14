@@ -3,6 +3,12 @@ pipeline {
     agent any
     
     stages {
+        when {
+            expression {
+                BRANCH_NAME == 'master'
+            } 
+
+        }
         stage("build"){
             steps {
                 echo 'building the application...'
