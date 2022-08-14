@@ -25,16 +25,19 @@ pipeline {
         always {
           // 
           steps {
+            echo 'always step'
           }
         }
         success {
           //
           steps {
+            echo 'success step'
           }
         }
         failure {
           //
           steps {
+            echo 'failure step'
           }
         }
     }
