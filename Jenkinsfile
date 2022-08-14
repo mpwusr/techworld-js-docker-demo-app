@@ -12,11 +12,20 @@ pipeline {
     }
     
     stages {
+
+    stage("init"){
+            steps{
+              script {
+                gv = load "build-script.groovy"
+              }
+
+           }
+    }
     
     stage("build"){
             steps {
                 echo 'building the application...'
-                echo "building version ${NEW_VERSION}"
+                echo "building version ${VERSION}"
             }
        }
         
